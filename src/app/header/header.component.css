@@ -1,0 +1,31 @@
+header { 
+    background-color:black;
+    height:170px;
+    padding-top:3px;
+    padding-bottom:20px;
+    padding-left:10px;
+}
+header h1 {
+    display: inline;
+    float: left;
+    font-size: 45px;
+    margin-left: 5px;
+    margin-top: -10px;
+}
+nav{
+    float: right;
+}
+nav ul {
+    margin-left:210px;
+}
+nav ul li{
+    display: inline-block;
+    float: left;
+    padding: 15px;
+    color: #015E87;
+    background-color : #ADACA8;
+}
+nav ul li:hover{
+    background-color: black;
+    color: white;
+}

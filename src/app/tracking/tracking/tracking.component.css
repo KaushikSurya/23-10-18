@@ -1,0 +1,74 @@
+.content {
+    width:50%;
+    overflow:hidden;
+    margin-top:100px;
+    height: auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-right: 25%;
+    margin-bottom: 50px;
+  }
+  
+  .title {
+    margin: 20px 10px;
+    height: 55px;
+    border: 1px solid black;
+    background-color: #f1f1f1;
+  }
+  
+  .arrow-right {
+      width: 0;
+      height: 0;
+      border-top: 9px solid #fff;
+      border-bottom: 9px solid #fff;
+      float: left;
+      border-left: 10px solid #015E87;
+      background: #f1f1f1;
+      margin-top: 12px;
+      margin-left: 20px;
+      margin-right: 2em;
+      padding-bottom: 2px;
+  }
+  
+  .title h2 {
+    margin-top: 5px;
+    text-align: left;
+  }
+  
+  .content h1 {
+    text-align: center;
+  }
+  
+  .content form {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .content form label {
+    font-size: 15pt;
+    font-weight: bold;
+  }
+
+  #oid {
+      width:50%;
+  }
+  
+  .content form textarea {
+    clear:both;
+    margin-left: 0;
+    width: 30%;
+    margin-bottom: 20px;
+  }
+  
+  .content form button {
+      background-color: #015E87; /* Green */
+      border: none;
+      color: white;
+      padding: 10px 25px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      margin: 4px 4px;
+      cursor: pointer;
+      font-size: 10pt;
+  }

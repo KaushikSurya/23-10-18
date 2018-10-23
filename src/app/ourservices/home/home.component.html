@@ -1,3 +1,22 @@
-<p>
-  home works!
-</p>
+<div class="container mt-6">
+    <div class="row mt-4">
+        <div class="col-sm-4 mr-3 border mt-4 pb-4">
+            <nav class="sidemenu mt-4">
+                <a routerLink='/ourservices/ic'>International Courier Services</a>
+                <a routerLink='/ourservices/dc'>Domestic Courier Services</a>
+                <a routerLink='/ourservices/sf'>Sea Freight</a>
+                <a routerLink='/ourservices/lo'>Logistics</a>
+                <a routerLink='/ourservices/af'>Air Freight</a>
+            </nav>
+            <button type="button" class="btn-md btn btn-default"><a routerLink='/ourservices/of'>PLACE ORDER</a></button>
+        </div>
+        <div class="col-sm-1"></div>
+        <div class="col-sm-6 mt-4">
+            <img class="mb-1" [src]="pic2" width="90%" height="205px" />
+            <img class="mt-1" [src]="pic1" width="90%" height="205px" />
+        </div>
+    </div>
+</div>
+<div class="row cols-sm-12">
+    <router-outlet class="mt-6"></router-outlet>
+</div>

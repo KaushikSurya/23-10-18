@@ -1,8 +1,5 @@
-
-<h4>Please fill up the form  to place your order!</h4>
-
-
-<div class="container mt-2">
+<div class="form1 container cols=sm-12 mt-4 ml-4">
+    <h4>Please fill up the form to place your order!</h4>
   <div class="row">
     <div class="col-sm-9 m-auto">
       <form class="form" #f="ngForm" novalidate (ngSubmit)="save()">
@@ -13,8 +10,8 @@
                 <fa name="user"></fa>
               </span>
             </div>
-            <input type="number" class="form-control" id="qty" name="qty" required min="1" [(ngModel)]="order.qty" #qty=ngModel
-              placeholder="Quantity" />
+            <input type="number" class="form-control" id="qty" name="qty" required min="1" [(ngModel)]="order.qty" #qty=ngModel placeholder="Quantity"
+            />
           </div>
           <div class="alert alert-danger" *ngIf="(qty.errors && (qty.touched || qty.darty))">
             <p *ngIf="(qty.errors && (qty.touched || qty.darty))">Please see that Quantity is entered
@@ -60,8 +57,8 @@
             </div>
             <div class="form-check-inline">
               <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="deliverytype" value="FAST" required [(ngModel)]="order.deliverytype"
-                  #deliverytype=ngModel />Fast
+                <input type="radio" class="form-check-input" name="deliverytype" value="FAST" required [(ngModel)]="order.deliverytype" #deliverytype=ngModel
+                />Fast
               </label>
             </div>
           </div>
@@ -81,8 +78,8 @@
             </div>
             <div class="form-check-inline" style="margin-left:10px;">
               <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="deliveryarea" value="INTERNATIONAL" required
-                  [(ngModel)]="order.deliveryarea" #deliveryarea=ngModel />International
+                <input type="radio" class="form-check-input" name="deliveryarea" value="INTERNATIONAL" required [(ngModel)]="order.deliveryarea"
+                  #deliveryarea=ngModel />International
               </label>
             </div>
             <div class="form-check-inline">
@@ -124,8 +121,8 @@
                 <fa name="address-card"></fa>
               </span>
             </div>
-            <input type="text" class="form-control" id="locality" name="locality" required [(ngModel)]="order.locality"
-              #locality=ngModel placeholder="Locality" />
+            <input type="text" class="form-control" id="locality" name="locality" required [(ngModel)]="order.locality" #locality=ngModel
+              placeholder="Locality" />
           </div>
           <div class="alert alert-danger" *ngIf="(locality.errors && (locality.touched || locality.darty))">
             <p *ngIf="(locality.errors && (locality.touched || locality.darty))">Please see that Locality
@@ -143,8 +140,8 @@
                 <fa name="address-card"></fa>
               </span>
             </div>
-            <input type="text" class="form-control" id="city" name="city" required [(ngModel)]="order.city" #city=ngModel
-              placeholder="City" />
+            <input type="text" class="form-control" id="city" name="city" required [(ngModel)]="order.city" #city=ngModel placeholder="City"
+            />
           </div>
           <div class="alert alert-danger" *ngIf="city.errors && (city.touched || city.darty)">
             <p>Please see that City
@@ -162,8 +159,8 @@
                 <fa name="address-card"></fa>
               </span>
             </div>
-            <input type="text" class="form-control" id="state" name="state" required [(ngModel)]="order.state" #state=ngModel
-              placeholder="State" />
+            <input type="text" class="form-control" id="state" name="state" required [(ngModel)]="order.state" #state=ngModel placeholder="State"
+            />
           </div>
           <div class="alert alert-danger" *ngIf="state.errors && (city.touched || state.darty)">
             <p>Please see that State
@@ -181,8 +178,8 @@
                 <fa name="address-card"></fa>
               </span>
             </div>
-            <input type="text" class="form-control" id="country" name="country" required [(ngModel)]="order.country"
-              #country=ngModel placeholder="Country" />
+            <input type="text" class="form-control" id="country" name="country" required [(ngModel)]="order.country" #country=ngModel
+              placeholder="Country" />
           </div>
           <div class="alert alert-danger" *ngIf="country.errors && (country.touched || country.darty)">
             <p>Please see that Country
@@ -207,3 +204,6 @@
           <button class="btn btn-block btn-primary">Save</button>
         </div>
       </form>
+    </div>
+  </div>
+</div>

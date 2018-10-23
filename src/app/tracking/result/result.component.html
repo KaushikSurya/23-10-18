@@ -1,0 +1,109 @@
+<div class="container mt-6">
+  <div class="row">
+    <h3 class="mb-5 mt-5">
+      Tracking Details
+    </h3>
+  </div>
+
+  <div class="row mb-5">
+    <div class="row1 bs-wizard m-auto" style="border-bottom:0;">
+      
+      <div class="col-xs-3 bs-wizard-step" [ngClass]="{ 'complete' : tracking.delstrt, 'disabled' : !tracking.delstrt }">
+        <div class="text-center bs-wizard-stepnum">Consignor</div>
+        <div class="progress">
+          <div class="progress-bar"></div>
+        </div>
+        <a href="#" class="bs-wizard-dot"></a>
+        <div class="bs-wizard-info text-center">Picked up from Sender</div>
+      </div>
+
+      <div class="col-xs-3 bs-wizard-step" [ngClass]="{ 'complete' : tracking.deldpt1, 'active' : !tracking.deldpt1, 'disabled' : !tracking.delstrt }" >
+        <!-- complete -->
+        <div class="text-center bs-wizard-stepnum">Delivery-Point 1</div>
+        <div class="progress">
+          <div class="progress-bar"></div>
+        </div>
+        <a href="#" class="bs-wizard-dot"></a>
+        <div class="bs-wizard-info text-center">Dispatched from delivery point</div>
+      </div>
+
+      <div class="col-xs-3 bs-wizard-step" [ngClass]="{ 'complete' : (tracking.deldpt1 && tracking.deldpt2), 'active' : !(tracking.deldpt1 && tracking.deldpt2), 'disabled' : !tracking.deldpt1 }">
+        <!-- complete -->
+        <div class="text-center bs-wizard-stepnum">Out for Delivery</div>
+        <div class="progress">
+          <div class="progress-bar"></div>
+        </div>
+        <a href="#" class="bs-wizard-dot"></a>
+        <div class="bs-wizard-info text-center">In Transit</div>
+      </div>
+
+      <div class="col-xs-3 bs-wizard-step" [ngClass]="{ 'complete': tracking.deldpt2, 'active' : !tracking.deldpt2, 'disabled' : !(tracking.deldpt && tracking.deldpt2) }">
+        <!-- active -->
+        <div class="text-center bs-wizard-stepnum">Delivery-Point 2</div>
+        <div class="progress">
+          <div class="progress-bar"></div>
+        </div>
+        <a href="#" class="bs-wizard-dot"></a>
+        <div class="bs-wizard-info text-center">Picked up at and Dispatched from delivery point 2</div>
+      </div>
+
+      <div class="col-xs-3 bs-wizard-step" [ngClass]="{ 'complete' : tracking.delend, 'active' : !tracking.delend, 'disabled' : !tracking.deldpt2 }">
+        <!-- disabled -->
+        <div class="text-center bs-wizard-stepnum">Consignee</div>
+        <div class="progress">
+          <div class="progress-bar"></div>
+        </div>
+        <a href="#" class="bs-wizard-dot"></a>
+        <div class="bs-wizard-info text-center">Package Delivered</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-6 mb-6">
+    <div class="col-sm-10 m-auto" *ngIf="tracking">
+      <div class="card mx-auto w-50">
+        <div class="card-header">
+          <h3 class="card-title">Order# : {{tracking.oid}}</h3>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-sm-5">
+              <h4>Container No </h4>
+            </div>
+            <div class="col-sm-2 text-center"><h4>:</h4></div>
+            <div class="col-sm-5">
+              <h4>{{tracking.cntNo}}</h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-5">
+              <h5>Freight</h5>
+            </div>
+            <div class="col-sm-2 text-center"><h5>:</h5></div>
+            <div class="col-sm-5">
+              <h5>{{tracking.mode}}</h5>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-5">
+              <h5>Weight of Order</h5>
+            </div>
+            <div class="col-sm-2 text-center"><h5>:</h5></div>
+            <div class="col-sm-5">
+              <h5>{{tracking.weight}} Kg(s)</h5>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-5">
+              <h5>No. of Items</h5>
+            </div>
+            <div class="col-sm-2 text-center"><h5>:</h5></div>
+            <div class="col-sm-5">
+              <h5>{{tracking.qty}}</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
